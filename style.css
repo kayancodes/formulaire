@@ -63,7 +63,8 @@ html {
   scroll-behavior: smooth; }
 
 body {
-  font-family: var(--body-font); }
+  font-family: var(--font1);
+  color: var(--color2); }
 
 h1 {
   font-family: var(--font2);
@@ -207,26 +208,48 @@ main {
 .form__container-texte {
   margin-bottom: var(--mb-40); }
 
-input[type=text], input[type=email], input[type=number] {
+textarea, input[type=text], input[type=email], input[type=number] {
   /* Remove First */
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  outline: none;
+  appearance: none; }
+
+input[type=text], input[type=email], input[type=number] {
   /* Style */
   width: 100%;
   text-align: left;
   padding: 10px 0 10px 10px;
   border-radius: 0;
   border: 1px solid var(--color2);
+  outline: none;
   font-family: var(--font1);
   font-size: var(--normal-font-size); }
 
-input[type=text] {
-  /* Remove */
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none; }
+textarea {
+  width: 100%;
+  border: none;
+  padding: 20px 10px 10px 10px;
+  outline: none;
+  font-family: var(--font2);
+  font-size: var(--normal-font-size);
+  line-height: 17px; }
+
+.form__content-textarea {
+  border: 1px solid var(--color2); }
+
+.textarea__label {
+  font-family: var(--font2);
+  font-size: var(--normal-font-size);
+  color: var(--color2);
+  text-align: left;
+  display: block;
+  padding: 10px 0 0 10px; }
+
+small {
+  padding: 2px 0 0 0;
+  font-family: var(--font2);
+  text-align: left;
+  display: block; }
 
 /*------------- FIN PARTIE FORM----------------------------------------------------*/
 /*===================== FIN ACHETER=======================================================*/
