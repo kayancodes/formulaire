@@ -109,6 +109,10 @@ main {
   margin: 4.6875rem auto 0;
   padding: 0 5%; }
 
+.grid {
+  display: grid;
+  gap: 1.2rem; }
+
 .sous__section {
   padding: 0 0 6.25rem;
   text-align: center; }
@@ -200,28 +204,29 @@ main {
   display: block; }
 
 /*------------- DEBUT PARTIE FORM --------------------*/
-.form__content {
-  margin-bottom: var(--mb-30); }
+.form__container-texte {
+  margin-bottom: var(--mb-40); }
 
 input[type=text], input[type=email], input[type=number] {
   /* Remove First */
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none; }
+  appearance: none;
+  outline: none;
+  /* Style */
+  width: 100%;
+  text-align: left;
+  padding: 10px 0 10px 10px;
+  border-radius: 0;
+  border: 1px solid var(--color2);
+  font-family: var(--font1);
+  font-size: var(--normal-font-size); }
 
 input[type=text] {
-  /* Remove First */
+  /* Remove */
   -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  /* Then Style */
-  border-radius: 15px;
-  border: 1px dashed red;
-  padding: 10px;
-  line-height: 20px;
-  text-align: center;
-  background: transparent;
-  outline: none; }
+  appearance: none; }
 
 /*------------- FIN PARTIE FORM----------------------------------------------------*/
 /*===================== FIN ACHETER=======================================================*/

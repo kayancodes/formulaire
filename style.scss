@@ -166,6 +166,11 @@ main{
     padding: 0 5%;
 }
 
+.grid{
+    display: grid;
+    gap: 1.2rem;
+}
+
 
 // .wrapper{
 //     width: 100%;
@@ -316,8 +321,13 @@ main{
 
 
 /*------------- DEBUT PARTIE FORM --------------------*/
-.form__content{
-    margin-bottom: var(--mb-30);
+.form__container{
+    // border:1px solid red;
+}
+
+
+.form__container-texte{
+    margin-bottom: var(--mb-40);
 }
 
 input[type=text], input[type=email], input[type=number]{   
@@ -325,32 +335,27 @@ input[type=text], input[type=email], input[type=number]{
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+    outline: none; 
 
-    // /* Then Style */
-    // border-radius: 15px;
-    // border: 1px dashed red;
-    // padding: 10px;
-    // line-height: 20px;
-    // text-align: center;
-    // background: transparent;
-    // outline: none;    
+    /* Style */
+    width: 100%;
+    text-align: left;
+    padding: 10px 0 10px 10px;
+    border-radius: 0;
+    border: 1px solid var(--color2);
+
+    font-family: var(--font1);
+    font-size: var(--normal-font-size);
 }
 
 
 input[type=text] {   
-    /* Remove First */
+    /* Remove */
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
 
-    /* Then Style */
-    border-radius: 15px;
-    border: 1px dashed red;
-    padding: 10px;
-    line-height: 20px;
-    text-align: center;
-    background: transparent;
-    outline: none;    
+       
 }
 
 
@@ -521,7 +526,6 @@ footer{
     }
 
     .form__container{
-        // border:1px solid red;
         max-width: 400px;
         display: block;
         margin: auto;
