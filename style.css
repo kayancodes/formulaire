@@ -211,7 +211,8 @@ main {
   transition-property: transform; }
 
 .rotated {
-  transform: rotate(-180deg); }
+  transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg); }
 
 /*------------- debut form texte ----------------------------------*/
 .form__container-texte {
