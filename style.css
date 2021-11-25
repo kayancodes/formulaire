@@ -253,8 +253,8 @@ small {
   display: block; }
 
 /*------------- FIN FORM TEXTE ----------------------------------*/
-/*------------- DEBUT FORM VALIDATION ----------------------------------*/
-.form__container-validation {
+/*------------- DEBUT FORM CHECK ----------------------------------*/
+.form__container-check {
   margin-bottom: var(--mb-40); }
 
 .form__content-check {
@@ -266,9 +266,37 @@ small {
   .form__content-check .check__label {
     width: 90%;
     text-align: justify;
-    font-size: 12px; }
+    font-size: 12px;
+    cursor: pointer; }
 
+input[type='checkbox'] {
+  /* Remove */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  /* Style */
+  width: 15px;
+  height: 15px;
+  border-radius: 0;
+  outline: 1px solid var(--color2); }
+
+input[type='checkbox']:checked {
+  outline: 1px solid var(--color2);
+  border: 3px solid var(--color0);
+  background-color: var(--color5); }
+
+/*------------- FIN FORM CHECK ----------------------------------*/
+/*------------- DEBUT FORM VALIDATION ----------------------------------*/
 /*------------- FIN FORM VALIDATION ----------------------------------*/
+button.form__content-submit {
+  background-color: var(--color5);
+  border: none;
+  color: white;
+  font-size: var(--normal-font-size);
+  padding: 0.9375rem 2.5rem;
+  cursor: pointer; }
+
 /*------------- FIN PARTIE FORM----------------------------------------------------*/
 /*===================== FIN ACHETER=======================================================*/
 /*===================== DEBUT FOOTER ==========================================*/

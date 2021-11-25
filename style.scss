@@ -389,8 +389,8 @@ small{
 
 
 
-/*------------- DEBUT FORM VALIDATION ----------------------------------*/
-.form__container-validation{
+/*------------- DEBUT FORM CHECK ----------------------------------*/
+.form__container-check{
     margin-bottom: var(--mb-40);
 }
 
@@ -398,6 +398,7 @@ small{
     width: 100%;
     display: flex;
     justify-content: space-between;
+    
     
         .check__case{
             font-size: 12px;
@@ -407,11 +408,64 @@ small{
             width: 90%;
             text-align: justify;
             font-size: 12px;
+            cursor: pointer;
         }
-
 }
+
+
+input[type='checkbox']{
+    /* Remove */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance:none;
+    
+
+    /* Style */
+    width: 15px;
+    height: 15px;
+    border-radius: 0;
+    outline: 1px solid var(--color2);
+  }
+
+  input[type='checkbox']:checked {
+    outline: 1px solid var(--color2);
+    border: 3px solid var(--color0);
+    background-color: var(--color5);
+    }
+/*------------- FIN FORM CHECK ----------------------------------*/
+
+
+
+
+/*------------- DEBUT FORM VALIDATION ----------------------------------*/
+// input[type=submit]{
+//     /* Remove */
+//     -webkit-appearance: none;
+//     -moz-appearance: none;
+//     -o-appearance: none;
+//     appearance:none;
+
+
+//     /* Style */ 
+//     background-color:var(--color5);
+//     border: none;
+//     color: white;
+//     font-size: var(--normal-font-size);
+//     padding: 0.9375rem 2.5rem;
+//     cursor: pointer;
+//   }
 /*------------- FIN FORM VALIDATION ----------------------------------*/
 
+
+button.form__content-submit{
+    background-color:var(--color5);
+    border: none;
+    color: white;
+    font-size: var(--normal-font-size);
+    padding: 0.9375rem 2.5rem;
+    cursor: pointer;
+ }
 
 
 
