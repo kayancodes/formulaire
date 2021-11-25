@@ -44,7 +44,7 @@
       --h2-font-size:1.125rem;
       --h3-font-size:0.9375rem;
       --normal-font-size:0.8125rem;
-      --small-font-size:0.625rem
+      --small-font-size:0.625rem;
       --smaller-font-size:0.4375rem ; } }
   @media (min-width: 768px) {
     :root {
@@ -155,7 +155,6 @@ main {
   width: 100%; }
   .accueil__inner .accueil__image {
     height: 100vh;
-    background-color: lightgreen;
     background: url("assets/img/appartement.png") no-repeat center top;
     background-size: cover;
     position: relative; }
@@ -185,7 +184,7 @@ main {
 
 /*===================== FIN ACCUEIL ==========================================*/
 /*===================== DEBUT ACHETER==========================================*/
-/*------------- PARTIE FORMULAIRE --------------------*/
+/*------------- PARTIE FORMULAIRE -------------------------------------------*/
 .acheter__formulaire-h3 {
   margin-bottom: 0; }
 
@@ -194,7 +193,7 @@ main {
   border: none;
   cursor: pointer; }
 
-/*------------- ZONE TOGGLE -----------------------------*/
+/*------------- debut zone toggle-----------------------------*/
 .formulaire__content {
   padding-top: 1.25rem; }
 
@@ -204,8 +203,9 @@ main {
 .formulaire__inner.is-visible {
   display: block; }
 
+/*------------- fin zone toggle -----------------------------*/
 /*------------- DEBUT PARTIE FORM ----------------------------------------------------*/
-/*------------- DEBUT FORM TEXTE ----------------------------------*/
+/*------------- debut form texte ----------------------------------*/
 .form__container-texte {
   margin-bottom: var(--mb-40); }
 
@@ -226,6 +226,30 @@ input[type=text], input[type=email], input[type=number] {
   font-family: var(--font1);
   font-size: var(--normal-font-size); }
 
+input::-webkit-input-placeholder {
+  color: var(--color2);
+  font-family: var(--font2);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+input::-moz-placeholder {
+  color: var(--color2);
+  font-family: var(--font2);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+input:-moz-placeholder {
+  color: var(--color2);
+  font-family: var(--font2);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+input:-ms-input-placeholder {
+  color: var(--color2);
+  font-family: var(--font2);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
 textarea {
   width: 100%;
   border: none;
@@ -233,7 +257,7 @@ textarea {
   outline: none;
   font-family: var(--font2);
   font-size: var(--normal-font-size);
-  line-height: 17px; }
+  line-height: 1.0625rem; }
 
 .form__content-textarea {
   border: 1px solid var(--color2); }
@@ -244,7 +268,7 @@ textarea {
   color: var(--color2);
   text-align: left;
   display: block;
-  padding: 10px 0 0 10px; }
+  padding: 0.625rem 0 0 0.625rem; }
 
 small {
   padding: 2px 0 0 0;
@@ -252,8 +276,8 @@ small {
   text-align: left;
   display: block; }
 
-/*------------- FIN FORM TEXTE ----------------------------------*/
-/*------------- DEBUT FORM CHECK ----------------------------------*/
+/*------------- fin form texe ----------------------------------*/
+/*------------- debut form check----------------------------------*/
 .form__container-check {
   margin-bottom: var(--mb-40); }
 
@@ -262,11 +286,11 @@ small {
   display: flex;
   justify-content: space-between; }
   .form__content-check .check__case {
-    font-size: 12px; }
+    font-size: 0.75rem; }
   .form__content-check .check__label {
     width: 90%;
     text-align: justify;
-    font-size: 12px;
+    font-size: 0.75rem;
     cursor: pointer; }
 
 input[type='checkbox'] {
@@ -276,8 +300,8 @@ input[type='checkbox'] {
   -o-appearance: none;
   appearance: none;
   /* Style */
-  width: 15px;
-  height: 15px;
+  width: 0.9375rem;
+  height: 0.9375rem;
   border-radius: 0;
   outline: 1px solid var(--color2); }
 
@@ -286,9 +310,8 @@ input[type='checkbox']:checked {
   border: 3px solid var(--color0);
   background-color: var(--color5); }
 
-/*------------- FIN FORM CHECK ----------------------------------*/
-/*------------- DEBUT FORM VALIDATION ----------------------------------*/
-/*------------- FIN FORM VALIDATION ----------------------------------*/
+/*------------- fin form check----------------------------------*/
+/*------------- debut form validation ----------------------------------*/
 button.form__content-submit {
   background-color: var(--color5);
   border: none;
@@ -297,6 +320,7 @@ button.form__content-submit {
   padding: 0.9375rem 2.5rem;
   cursor: pointer; }
 
+/*------------- fin form validation ----------------------------------*/
 /*------------- FIN PARTIE FORM----------------------------------------------------*/
 /*===================== FIN ACHETER=======================================================*/
 /*===================== DEBUT FOOTER ==========================================*/
@@ -337,7 +361,12 @@ footer {
     display: none; } }
 @media (min-width: 768px) {
   .footer__before {
-    height: 6.25rem; } }
+    height: 6.25rem; }
+    .footer__before a {
+      font-size: var(--small-font-size); }
+
+  .footer__inner a {
+    font-size: var(--normal-font-size); } }
 @media (min-width: 962px) {
   .main {
     width: 800px; }

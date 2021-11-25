@@ -46,7 +46,7 @@
     --h2-font-size:1.125rem;
     --h3-font-size:0.9375rem;
     --normal-font-size:0.8125rem;
-    --small-font-size:0.625rem
+    --small-font-size:0.625rem;
     --smaller-font-size:0.4375rem
 }
 
@@ -244,7 +244,6 @@ main{
     
     .accueil__image{
         height: 100vh;
-        background-color: lightgreen;
         background:url("assets/img/appartement.png") no-repeat center top ;
         background-size: cover;
         position: relative;   
@@ -295,7 +294,7 @@ main{
 
 /*===================== DEBUT ACHETER==========================================*/
 
-/*------------- PARTIE FORMULAIRE --------------------*/
+/*------------- PARTIE FORMULAIRE -------------------------------------------*/
 .acheter__formulaire-h3{
     margin-bottom: 0;
 }
@@ -308,7 +307,7 @@ main{
 }
 
 
-/*------------- ZONE TOGGLE -----------------------------*/
+/*------------- debut zone toggle-----------------------------*/
 .formulaire__content{
     padding-top: 1.25rem;
 }
@@ -318,19 +317,16 @@ main{
 .formulaire__inner.is-visible{
     display: block;
 }
+/*------------- fin zone toggle -----------------------------*/
+
 
 
 
 
 
 /*------------- DEBUT PARTIE FORM ----------------------------------------------------*/
-.form__container{
-    // border:1px solid red;
-}
 
-
-
-/*------------- DEBUT FORM TEXTE ----------------------------------*/
+/*------------- debut form texte ----------------------------------*/
 .form__container-texte{
     margin-bottom: var(--mb-40);
 }
@@ -357,6 +353,11 @@ input[type=text], input[type=email], input[type=number]{
     font-size: var(--normal-font-size);
 }
 
+input::-webkit-input-placeholder { color:var(--color2); font-family: var(--font2); text-transform: none;font-size: var(--normal-font-size); }
+input::-moz-placeholder { color:var(--color2); font-family: var(--font2); text-transform: none;font-size: var(--normal-font-size); }
+input:-moz-placeholder { color:var(--color2); font-family: var(--font2); text-transform: none;font-size: var(--normal-font-size); }
+input:-ms-input-placeholder { color:var(--color2); font-family: var(--font2); text-transform: none;font-size: var(--normal-font-size); }
+
 
 textarea{
     width: 100%;
@@ -365,7 +366,7 @@ textarea{
     outline: none; 
     font-family: var(--font2);
     font-size: var(--normal-font-size);
-    line-height: 17px;
+    line-height: 1.0625rem;
 }
 .form__content-textarea{
     border: 1px solid var(--color2);
@@ -376,7 +377,7 @@ textarea{
     color: var(--color2);
     text-align: left;
     display: block;
-    padding: 10px 0 0 10px;
+    padding: 0.625rem 0 0 0.625rem;
 
 }
 small{
@@ -385,11 +386,11 @@ small{
     text-align: left;
     display: block;
 }
-/*------------- FIN FORM TEXTE ----------------------------------*/
+/*------------- fin form texe ----------------------------------*/
 
 
 
-/*------------- DEBUT FORM CHECK ----------------------------------*/
+/*------------- debut form check----------------------------------*/
 .form__container-check{
     margin-bottom: var(--mb-40);
 }
@@ -401,13 +402,13 @@ small{
     
     
         .check__case{
-            font-size: 12px;
+            font-size: 0.75rem;
         }
 
         .check__label{
             width: 90%;
             text-align: justify;
-            font-size: 12px;
+            font-size: 0.75rem;
             cursor: pointer;
         }
 }
@@ -422,8 +423,8 @@ input[type='checkbox']{
     
 
     /* Style */
-    width: 15px;
-    height: 15px;
+    width: 0.9375rem;
+    height: 0.9375rem;
     border-radius: 0;
     outline: 1px solid var(--color2);
   }
@@ -433,31 +434,12 @@ input[type='checkbox']{
     border: 3px solid var(--color0);
     background-color: var(--color5);
     }
-/*------------- FIN FORM CHECK ----------------------------------*/
+/*------------- fin form check----------------------------------*/
 
 
 
 
-/*------------- DEBUT FORM VALIDATION ----------------------------------*/
-// input[type=submit]{
-//     /* Remove */
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     -o-appearance: none;
-//     appearance:none;
-
-
-//     /* Style */ 
-//     background-color:var(--color5);
-//     border: none;
-//     color: white;
-//     font-size: var(--normal-font-size);
-//     padding: 0.9375rem 2.5rem;
-//     cursor: pointer;
-//   }
-/*------------- FIN FORM VALIDATION ----------------------------------*/
-
-
+/*------------- debut form validation ----------------------------------*/
 button.form__content-submit{
     background-color:var(--color5);
     border: none;
@@ -466,135 +448,15 @@ button.form__content-submit{
     padding: 0.9375rem 2.5rem;
     cursor: pointer;
  }
-
-
-
-// input[type=text] {   
-//     /* Remove */
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     appearance: none;
-  
-// }
-
-
-// .inner__input{
-//     width: 100%;
-//     padding: 0.9375rem 0 0.9375rem 0.625rem;
-//     border-radius: 0;
-//     border: 0.0625rem solid var(--color2);
-//     outline: none;
-// }
-
-
-// input[type=text]{   
-//     -webkit-appearance: none !important;
-//     -moz-appearance: none !important;
-//     appearance: none !important;
-// }
-
-
-// input::-webkit-input-placeholder { color:var(--color2); font-family: var(--font1); text-transform: none;font-size: var(--normal-font-size); }
-// input::-moz-placeholder { color:var(--color2); font-family: var(--font1); text-transform: none;font-size: var(--normal-font-size); }
-// input:-moz-placeholder { color:var(--color2); font-family: var(--font1); text-transform: none;font-size: var(--normal-font-size); }
-// input:-ms-input-placeholder { color:var(--color2); font-family: var(--font1); text-transform: none;font-size: var(--normal-font-size); }
-
-
-// small{
-//     display: block;
-//     text-align: left;
-//     padding: 0.3125rem 0 0 0.625rem;
-// }
-
-
-
-
-// .form__content-textarea{
-//     border: 0.0625rem solid var(--color2);
-//     text-align: left;
-//     padding: 0.9375rem 0 0 0.625rem;
-// }
-// label.inner__label{
-//     color: var(--color2);
-//     width: 100%;
-//     text-align: left !important;
-//     margin-bottom: var(--mb-30);
-//     font-family: var(--font1);
-//     color: var(--color2);
-//     font-size: 0.75rem;
-// }
-// .inner__textarea{
-//     width: 100%;
-//     padding: 10%;
-//     border: none;
-//     overflow: hidden;
-//     border-radius: 0;
-//     font-family: var(--font1);
-//     color: var(--color4);
-//     font-size: var(--normal-font-size)
-// }
-
-
-// .form__content-check{
-//    display: flex;
-//    margin-bottom: var(--mb-30);
-//    font-family: var(--font2);
-//    color: var(--color2);
-//    font-size: var(--normal-font-size);
-//    justify-content: space-between;
-//    cursor: pointer;
-
-//    .check-case{
-//     cursor: pointer;
-//    }
-
-//    .check-label{
-//         width: 90%;
-//         text-align: justify;
-//         cursor: pointer;
-//     }
-// }
-
-
-// .inner__submit{
-//     margin-bottom: var(--mb-30);   
-// }
-
-// input[type='checkbox']{
-//     width: 15px !important;
-//     height: 15px !important;
-//     border-radius: 0;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     -o-appearance: none;
-//     appearance:none;
-
-//     outline: 1px solid var(--color2);
-//   }
-//   input[type='checkbox']:checked {
-//     outline: 1px solid var(--color2);
-
-//     border: 3px solid var(--color0);
-//     background-color: var(--color5);
-   
-//     }
-
-
-// button.inner__submit{
-//     background-color:var(--color5);
-//     border: none;
-//     color: white;
-//     font-size: var(--normal-font-size);
-//     padding: 0.9375rem 2.5rem;
-//     cursor: pointer;
-//  }
-
+/*------------- fin form validation ----------------------------------*/
 
 
 /*------------- FIN PARTIE FORM----------------------------------------------------*/
-
-
 /*===================== FIN ACHETER=======================================================*/
+
+
+
+
 
 
 /*===================== DEBUT FOOTER ==========================================*/
@@ -676,11 +538,21 @@ footer{
 
 
 
-//------------ DEBUT MD ( > 768px) : ssmall tablets and large smartphones (landscape view) ---------//
+//------------ DEBUT MD ( > 768px) : small tablets and large smartphones (landscape view) ---------//
 @include md{
    .footer__before{
        height: 6.25rem;
+
+        a{
+            font-size: var(--small-font-size);
+        }
    }
+
+   .footer__inner a{
+         font-size: var(--normal-font-size);
+    }
+
+   
 
 }
 //------------ FIN MD ( > 768px) : small tablets and large smartphones (landscape view) ---------//
