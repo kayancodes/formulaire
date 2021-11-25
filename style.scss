@@ -148,7 +148,7 @@ ul {
     list-style: none;
 }
 
-a {
+a{
     text-decoration: none;
 }
 
@@ -223,14 +223,16 @@ main{
 .nav__list{
     display: none;
 }
-.nav__item{
+.nav__link{
     color:var(--color4);
+    font-family: var(--normal-font-size);
     
     &:hover{
         color:var(--color0);
         font-weight:var(--font-medium);
     }
 }
+
 
 /*===================== FIN HEADER ==========================================*/
 

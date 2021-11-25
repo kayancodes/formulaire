@@ -143,9 +143,10 @@ main {
 .nav__list {
   display: none; }
 
-.nav__item {
-  color: var(--color4); }
-  .nav__item:hover {
+.nav__link {
+  color: var(--color4);
+  font-family: var(--normal-font-size); }
+  .nav__link:hover {
     color: var(--color0);
     font-weight: var(--font-medium); }
 
