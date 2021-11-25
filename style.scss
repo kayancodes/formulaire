@@ -331,6 +331,10 @@ main{
 }
 
 
+input{
+    -webkit-appearance: none;
+}
+
 
 input::-webkit-input-placeholder { color:var(--color2); font-family: var(--font1); text-transform: none;font-size: var(--normal-font-size); }
 input::-moz-placeholder { color:var(--color2); font-family: var(--font1); text-transform: none;font-size: var(--normal-font-size); }
