@@ -206,6 +206,13 @@ main {
 
 /*------------- fin zone toggle -----------------------------*/
 /*------------- DEBUT PARTIE FORM ----------------------------------------------------*/
+.formulaire__arrow {
+  transition-duration: .4s;
+  transition-property: transform; }
+
+.rotated {
+  transform: rotate(-180deg); }
+
 /*------------- debut form texte ----------------------------------*/
 .form__container-texte {
   margin-bottom: var(--mb-40); }

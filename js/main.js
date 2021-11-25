@@ -4,9 +4,11 @@
 /*==================== DEBUT FORMULAIRE BOUTON ==========================================*/
 const btn = document.querySelector('button');
 const content = document.querySelector('.formulaire__inner');
+const img = document.querySelector('.formulaire__arrow');
 
 btn.addEventListener('click', () => {
-    content.classList.toggle('is-visible')
+    content.classList.toggle('is-visible');
+    img.classList.toggle('rotated')
 })
 /*==================== FIN FORMULAIRE BOUTON ==========================================*/
 

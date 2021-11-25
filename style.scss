@@ -76,7 +76,6 @@
     --mb-100:6.25rem;
 }
 
-
 }
 
 
@@ -327,6 +326,17 @@ main{
 
 
 /*------------- DEBUT PARTIE FORM ----------------------------------------------------*/
+
+.formulaire__arrow{
+    transition-duration: .4s;
+    transition-property: transform;
+}
+
+.rotated{
+    transform:rotate(-180deg);
+}
+
+
 
 /*------------- debut form texte ----------------------------------*/
 .form__container-texte{
