@@ -332,8 +332,8 @@ main{
 
 
 input[type=text]{   
-    -webkit-appearance: none;
-    -moz-appearance: none;
+    -webkit-appearance: none !important;
+    -moz-appearance: none !important;
     appearance: none !important;
 }
 
