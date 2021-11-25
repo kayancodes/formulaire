@@ -331,10 +331,10 @@ main{
 }
 
 
-input[type="text"] {   
+input[type="text"]{   
     -webkit-appearance: none;
     -moz-appearance: none;
-    appearance: none;
+    appearance: none !important;
 }
 
 
