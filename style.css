@@ -204,7 +204,8 @@ main {
 .formulaire__inner.is-visible {
   display: block; }
 
-/*------------- DEBUT PARTIE FORM --------------------*/
+/*------------- DEBUT PARTIE FORM ----------------------------------------------------*/
+/*------------- DEBUT FORM TEXTE ----------------------------------*/
 .form__container-texte {
   margin-bottom: var(--mb-40); }
 
@@ -251,6 +252,23 @@ small {
   text-align: left;
   display: block; }
 
+/*------------- FIN FORM TEXTE ----------------------------------*/
+/*------------- DEBUT FORM VALIDATION ----------------------------------*/
+.form__container-validation {
+  margin-bottom: var(--mb-40); }
+
+.form__content-check {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; }
+  .form__content-check .check__case {
+    font-size: 12px; }
+  .form__content-check .check__label {
+    width: 90%;
+    text-align: justify;
+    font-size: 12px; }
+
+/*------------- FIN FORM VALIDATION ----------------------------------*/
 /*------------- FIN PARTIE FORM----------------------------------------------------*/
 /*===================== FIN ACHETER=======================================================*/
 /*===================== DEBUT FOOTER ==========================================*/

@@ -390,8 +390,25 @@ small{
 
 
 /*------------- DEBUT FORM VALIDATION ----------------------------------*/
-.form__content-validation{
+.form__container-validation{
+    margin-bottom: var(--mb-40);
+}
+
+.form__content-check{
     width: 100%;
+    display: flex;
+    justify-content: space-between;
+    
+        .check__case{
+            font-size: 12px;
+        }
+
+        .check__label{
+            width: 90%;
+            text-align: justify;
+            font-size: 12px;
+        }
+
 }
 /*------------- FIN FORM VALIDATION ----------------------------------*/
 
