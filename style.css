@@ -1,0 +1,386 @@
+@charset "UTF-8";
+/* ===================== DEBUT GOOGLE FONTS ======================================================*/
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Mulish:wght@200;300;400&display=swap");
+/* DEBUT ROOT*/
+:root {
+  /*--------COLOR--------------------------*/
+  --color0:#FFF;
+  --color1:#343434;
+  /* titre */
+  --color2:#979ca1;
+  /* gris foncé r*/
+  --color3:#e0e5eb;
+  /* bleu clair */
+  --color4:#1d2228;
+  /* bleu foncé */
+  --color5:#202020;
+  /*--------FONT AND TYPOGRAPHY---------------------------*/
+  --font2:'Raleway', sans-serif;
+  --font1: 'Mulish', sans-serif;
+  --h1-font-size:1.25rem;
+  --h2-font-size:0.9375rem;
+  --h3-font-size:0.8125rem;
+  --normal-font-size:0.75rem;
+  --small-font-size:0.5625rem;
+  --smaller-font-size:0.4375rem;
+  /*--------FONT WEIGHT----------------------------------------------------------*/
+  --font-thin: 100;
+  --font-extraL: 200;
+  --font-light: 300;
+  --font-regular: 400;
+  --font-medium: 500;
+  --font-semi-bold: 600;
+  --font-bold: 700;
+  /*--------MARGIN BOTTOM---------------------------*/
+  --mb-30:0.9375rem;
+  --mb-40:1.25rem;
+  --mb-50:1.5625rem;
+  --mb-60:1.875rem;
+  --mb-100:3.125rem; }
+  @media (min-width: 768px) {
+    :root {
+      --h1-font-size:1.5625rem;
+      --h2-font-size:1.125rem;
+      --h3-font-size:0.9375rem;
+      --normal-font-size:0.8125rem;
+      --small-font-size:0.625rem
+      --smaller-font-size:0.4375rem ; } }
+  @media (min-width: 768px) {
+    :root {
+      --mb-30:1.875rem;
+      --mb-40:2.5rem;
+      --mb-50:3.125rem;
+      --mb-60:3.75rem;
+      --mb-100:6.25rem; } }
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0; }
+
+html {
+  scroll-behavior: smooth; }
+
+body {
+  font-family: var(--body-font); }
+
+h1 {
+  font-family: var(--font2);
+  font-size: var(--h1-font-size);
+  font-weight: var(--font-light);
+  margin-bottom: var(--mb-60);
+  color: var(--color1); }
+
+h2 {
+  font-family: var(--font1);
+  font-weight: var(--font-light);
+  margin-bottom: var(--mb-40);
+  font-size: var(--h2-font-size);
+  color: var(--color1); }
+
+h3 {
+  font-family: var(--font2);
+  font-size: var(--h3-font-size);
+  font-weight: var(--font-light);
+  margin-bottom: var(--mb-30);
+  color: var(--color1); }
+
+p {
+  font-family: var(--font2);
+  color: var(--color2);
+  font-weight: var(--font-light);
+  font-size: var(--normal-font-size);
+  line-height: 1.125rem; }
+
+ul {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+img {
+  max-width: 100%;
+  height: auto; }
+
+main {
+  width: 100%;
+  display: block;
+  margin: 4.6875rem auto 0;
+  padding: 0 5%; }
+
+.sous__section {
+  padding: 0 0 6.25rem;
+  text-align: center; }
+
+/*===================== DEBUT HEADER ==========================================*/
+.header {
+  position: fixed;
+  z-index: 10;
+  top: 0;
+  width: 100%; }
+
+.header__inner {
+  padding: 0.625rem 0;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color2); }
+
+.header__titre {
+  position: absolute;
+  left: 0.625rem; }
+
+.header__nav {
+  padding: 1.5rem 0; }
+
+.nav__list {
+  display: none; }
+
+.nav__item {
+  color: var(--color4); }
+  .nav__item:hover {
+    color: var(--color0);
+    font-weight: var(--font-medium); }
+
+/*===================== FIN HEADER ==========================================*/
+/*===================== DEBUT ACCUEIL ==========================================*/
+.accueil__inner {
+  width: 100%; }
+  .accueil__inner .accueil__image {
+    height: 100vh;
+    background-color: lightgreen;
+    background: url("assets/img/appartement.png") no-repeat center top;
+    background-size: cover;
+    position: relative; }
+  .accueil__inner .accueil__infos {
+    padding: 1.875rem 0;
+    position: relative;
+    background-color: var(--color3); }
+  .accueil__inner .accueil__infos-content {
+    text-align: center; }
+  .accueil__inner .accueil__infos-iconesPack {
+    display: flex;
+    justify-content: space-between;
+    max-width: 18.75rem;
+    margin: 0 auto var(--mb-50); }
+    .accueil__inner .accueil__infos-iconesPack .iconesPack__item {
+      border-right: 0.0625rem solid var(--color2);
+      padding: 0 1.25rem;
+      text-align: center; }
+      .accueil__inner .accueil__infos-iconesPack .iconesPack__item:last-child {
+        border-right: none; }
+  .accueil__inner .iconesPack__item-text {
+    color: var(--color2); }
+  .accueil__inner .accueil__info-1000 {
+    font-family: var(--font1);
+    font-weight: var(--font-light);
+    margin-bottom: var(--mb-60); }
+
+/*===================== FIN ACCUEIL ==========================================*/
+/*===================== DEBUT ACHETER==========================================*/
+/*------------- PARTIE FORMULAIRE --------------------*/
+.acheter__formulaire-h3 {
+  margin-bottom: 0; }
+
+.btn-primary {
+  background-color: transparent;
+  border: none;
+  cursor: pointer; }
+
+/*------------- ZONE TOGGLE -----------------------------*/
+.formulaire__content {
+  padding-top: 1.25rem; }
+
+.formulaire__inner {
+  display: none; }
+
+.formulaire__inner.is-visible {
+  display: block; }
+
+/*------------- DEBUT PARTIE FORM --------------------*/
+.form__content {
+  margin-bottom: var(--mb-30); }
+
+.inner__input {
+  width: 100%;
+  padding: 0.9375rem 0 0.9375rem 0.625rem;
+  border-radius: 0;
+  border: 0.0625rem solid var(--color2);
+  outline: none; }
+
+input::-webkit-input-placeholder {
+  color: var(--color2);
+  font-family: var(--font1);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+input::-moz-placeholder {
+  color: var(--color2);
+  font-family: var(--font1);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+input:-moz-placeholder {
+  color: var(--color2);
+  font-family: var(--font1);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+input:-ms-input-placeholder {
+  color: var(--color2);
+  font-family: var(--font1);
+  text-transform: none;
+  font-size: var(--normal-font-size); }
+
+small {
+  display: block;
+  text-align: left;
+  padding: 0.3125rem 0 0 0.625rem; }
+
+.form__content-textarea {
+  border: 0.0625rem solid var(--color2);
+  text-align: left;
+  padding: 0.9375rem 0 0 0.625rem; }
+
+label.inner__label {
+  color: var(--color2);
+  width: 100%;
+  text-align: left !important;
+  margin-bottom: var(--mb-30);
+  font-family: var(--font1);
+  color: var(--color2);
+  font-size: 0.75rem; }
+
+.inner__textarea {
+  width: 100%;
+  padding: 10%;
+  border: none;
+  overflow: hidden;
+  border-radius: 0;
+  font-family: var(--font1);
+  color: var(--color4);
+  font-size: var(--normal-font-size); }
+
+.form__content-check {
+  display: flex;
+  margin-bottom: var(--mb-30);
+  font-family: var(--font2);
+  color: var(--color2);
+  font-size: var(--normal-font-size);
+  justify-content: space-between;
+  cursor: pointer; }
+  .form__content-check .check-case {
+    cursor: pointer; }
+  .form__content-check .check-label {
+    width: 90%;
+    text-align: justify;
+    cursor: pointer; }
+
+.inner__submit {
+  margin-bottom: var(--mb-30); }
+
+input[type='checkbox'] {
+  width: 15px !important;
+  height: 15px !important;
+  border-radius: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: 1px solid var(--color2); }
+
+input[type='checkbox']:checked {
+  outline: 1px solid var(--color2);
+  border: 3px solid var(--color0);
+  background-color: var(--color5); }
+
+button.inner__submit {
+  background-color: var(--color5);
+  border: none;
+  color: white;
+  font-size: var(--normal-font-size);
+  padding: 0.9375rem 2.5rem;
+  cursor: pointer; }
+
+/*------------- FIN PARTIE FORM----------------------------------------------------*/
+/*===================== FIN ACHETER=======================================================*/
+/*===================== DEBUT FOOTER ==========================================*/
+footer {
+  width: 100%; }
+
+.footer__before {
+  background-color: var(--color3);
+  height: 3.75rem; }
+
+.footer__inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--color2);
+  padding: 0.9375rem 0; }
+  .footer__inner a {
+    color: var(--color4);
+    padding: 0 0.625rem;
+    font-family: var(--font1);
+    font-size: var(--smaller-font-size); }
+  .footer__inner .footer__item {
+    border-left: 0.0625rem solid var(--color4);
+    border-right: 0.0625rem solid var(--color4); }
+
+/*===================== FIN FOOTER ==========================================*/
+/*===================== DEBUT RESPONSIVE ==========================================*/
+@media (min-width: 414px) {
+  .acheter__vente-line {
+    display: block; }
+
+  .form__container {
+    max-width: 400px;
+    display: block;
+    margin: auto; } }
+@media (min-width: 568px) {
+  .acheter__vente-line {
+    display: none; } }
+@media (min-width: 768px) {
+  .footer__before {
+    height: 6.25rem; } }
+@media (min-width: 962px) {
+  .main {
+    width: 800px; }
+
+  .header__inner {
+    padding: inherit; }
+
+  .nav__list {
+    font-family: var(--font2);
+    display: flex;
+    flex-direction: row;
+    column-gap: 3.125rem; }
+
+  .accueil__inner {
+    display: flex;
+    width: 100%; }
+    .accueil__inner .accueil__image {
+      width: 60%;
+      height: 100vh;
+      height: 100vh; }
+    .accueil__inner .accueil__infos {
+      width: 40%;
+      padding: 1.875rem 0;
+      position: relative;
+      background-color: var(--color3);
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+
+  .accueil__infos-iconesPack {
+    display: inherit;
+    max-width: 100%; }
+
+  .accueil__infos-iconesDuo {
+    position: absolute;
+    bottom: 0.9375rem;
+    left: 1.25rem; } }
+
+/*# sourceMappingURL=style.css.map */

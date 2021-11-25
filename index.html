@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Passion+One:wght@700&family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
+    <!-- FAVICON ------------------------------->
+    <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
+
+    <!-- CSS ------------------------------->
+    <link rel="stylesheet" href="style.css">
+
+    <title>gence-Plus:Exercice</title>
+</head>
+
+
+<body>
+
+    <!-- <div class="wrapper"> -->
+
+       <!--====== DEBUT HEADER ==================================-->
+        <header class="header">
+
+            <div class="header__inner">
+                <div class="header__titre">
+                    <img src="assets/img/logo2.png" alt="">
+                </div>
+
+                <nav class="header__nav">
+                    <ul class="nav__list">
+                        <li class="nav__item">Accueil</li>
+                        <li class="nav__item">Acheter</li>
+                        <li class="nav__item">Louer</li>
+                        <li class="nav__item">Estimer</li>
+                        <li class="nav__item">Vendus</li>
+                        <li class="nav__item">Actualités</li>
+                        <li class="nav__item">L'agence</li>              
+                     </ul>
+                </nav>
+        
+            </div>
+       </header>
+        <!--====== FIN HEADER ==================================-->
+
+
+        <!--====== DEBUT ACCUEIL ==================================-->
+       <div class="accueil" id="accueil">
+            <div class="accueil__inner">
+
+                <div class="accueil__image">
+                    <!-- <img src="assets/img/appartement.png" alt=""> -->
+                </div>
+
+                <div class="accueil__infos" id="accueil__infos">
+                    <div class="accueil__infos-content">
+                        <h2 class="accueil__info-appartement">APPARTEMENT</h2>
+                        <h1 class="accueil__info-boulogne">Boulogne-Billancourt (92300) <br> Place de la Mairie</h1>
+
+                        <div class="accueil__infos-iconesPack">
+                            <div class="iconesPack__item">
+                                <img src="assets/img/icone__mcarre2.png" alt="">
+                                <p class="iconesPack__item-text">100</p>
+                            </div>
+                            <div class="iconesPack__item">
+                                <img src="assets/img/icone__door.png" alt="">
+                                <p class="iconesPack__item-text">7</p>
+                            </div>
+                            <div class="iconesPack__item">
+                                <img src="assets/img/icone__bed.png" alt="">
+                                <p class="iconesPack__item-text">4</p>
+                            </div>
+                            <div class="iconesPack__item">
+                                <img src="assets/img/icone__bathtub.png" alt="">
+                                <p class="iconesPack__item-text">1</p>
+                            </div>
+                            <div class="iconesPack__item">
+                                <img src="assets/img/icone__shower.png" alt="">
+                                <p class="iconesPack__item-text">1</p>
+                            </div>
+                        </div>
+
+                        <p class="accueil__info-1000">1&nbsp; 0 0 0&nbsp; &euro; &nbsp;PAR MOIS</p>
+
+                    
+                        <div class="accueil__infos-iconesDuo">
+                            <img src="assets/img/icones__duo.png" alt="">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+       </div>
+        <!--====== FIN ACCUEIL ==================================-->
+
+
+        <main class="main">
+            <!--====== DEBUT ACHETER =========================================================-->
+            <section class="acheter section" id="acheter">
+                <div class="acheter__inner">
+
+                    <!--------- DEBUT VENTE ----------------------------------------------------------->
+                    <div class="acheter__vente sous__section">
+                        <h1>Vente appartement à <br class="acheter__vente-line" /> Boulogne-Billancourt</h1>
+                        <h3 class="acheter__vente-soustitre soustitre">Descriptif du bien</h3>
+                        <p class="acheter__vente-texte">
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
+                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
+                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
+                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
+                            sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur 
+                            adipiscing elit, sed do eiusmod tempor
+                        </p>
+                    </div>
+                    <!--------- DEBUT VENTE ----------------------------------------------------------->
+
+               
+    
+    
+                    <!--------- DEBUT FORMULAIRE ----------------------------------------------------------->
+                    <div class="acheter__formulaire sous__section">
+
+                        <div class="acheter__formulaire-soustitre">
+                            <h3 class="acheter__formulaire-h3">Contactez-nous</h3>
+                            <button class="btn btn-primary">
+                                <img src="assets/img/arrowdown.png" class="formulaire__arrow" alt="">
+                            </button>
+                        </div>
+
+
+                        <!--------- DEBUT ZONE TOGGLE ----------------------------------------------------------->
+                        <div class="formulaire__content">
+                            <div class="formulaire__inner">
+
+
+                                <form method="POST" action="traitement.php" class="form__container" id="monFormulaire">
+                                    <div class="form__content">
+                                        <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom" class="inner__input">
+                                    </div>
+
+                                    <div class="form__content">
+                                        <input type="text" id="nom" name="nom" placeholder="Votre Nom" class="inner__input">
+                                    </div>
+
+                                    <div class="form__content">
+                                        <input type="email" id="email" name="mail" placeholder="Votre Email*" class="inner__input">
+                                        <small></small>
+                                    </div>
+
+                                    <div class="form__content">
+                                        <input type="number" id="tel" name="tel" placeholder="Votre numéro de téléphone" class="inner__input"><br>
+                                    </div>
+                                            
+                                    <div class="form__content form__content-textarea">
+                                        <label for="message" class="inner__label">Votre Message</label>
+                                        <textarea name="presentation" id="message" cols="30" rows="3" class="inner__textarea">Bonjour, je souhaiterais avoir plus de renseignements sur ce bien et prendre rendez-vous pour le visiter. Pourriez-vous me recontacter ? Cordialement
+                                        </textarea>
+                                    </div>
+
+                                    <div class="form__content">
+                                        <div class="form__content-check form__content-checkOne">
+                                            <input type="checkbox" name="infos" id="check1"  value="checkbox" class="check-case">
+                                            <label for="check1" class="check-label">
+                                                Je souhaite recevoir des informations personnalisées par e-mail et/ou sms de la part d’Agence-Plus.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__content">
+                                        <div class="form__content-check">
+                                            <input type="checkbox" name="donnes" id="check2"  value="checkbox" class="check-case">
+                                            <label for="check2" class="check-label">
+                                                J’accepte que mes données soient transférées aux partenaires du Réseau Agence-Plus afin que ces derniers puissent m’adresser des communications par e-mail et/ou sms.
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form__content">
+                                        <button type="submit" class="inner__submit">Écrire à l'agence</button>                                    </div>
+                                </form>
+
+
+                            </div>
+                        </div>
+                        <!--------- FIN PARTIE TOGGLE ----------------------------------------------------------->
+
+                    </div>
+                    <!--------- FIN FORMULAIRE ----------------------------------------------------------->
+
+                </div>
+            </section>
+            <!--====== FIN ACHETER============================================================-->
+        </main>
+
+
+        <!--====== DEBUT FOOTER ============================================================-->
+        <footer>
+            <div class="footer__before">
+
+            </div>
+            <div class="footer__inner">
+
+                <!-- <div class="footer__links"> -->
+                    <a href="">MENTIONS LÉGALES/BARÈME</a> <a href="" class="footer__item">LIENS UTILES</a> <a href="">RÉALISATION AGENCE PLUS</a>
+                <!-- </div> -->
+              
+
+            </div>
+        </footer>
+        <!--====== FIN FOOTER ============================================================-->
+
+    <!-- </div> FIN WRAPPER -->
+
+
+    
+    <!-- DEBUT SCROLL REVEAL ------------------------------->
+    <script src="js/scrollreveal.min.js"></script>
+
+    <!-- MAIN JS ------------------------------->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
