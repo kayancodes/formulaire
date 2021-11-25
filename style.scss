@@ -320,6 +320,38 @@ main{
     margin-bottom: var(--mb-30);
 }
 
+input[type=text], input[type=email], input[type=number]{   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    // /* Then Style */
+    // border-radius: 15px;
+    // border: 1px dashed red;
+    // padding: 10px;
+    // line-height: 20px;
+    // text-align: center;
+    // background: transparent;
+    // outline: none;    
+}
+
+
+input[type=text] {   
+    /* Remove First */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    /* Then Style */
+    border-radius: 15px;
+    border: 1px dashed red;
+    padding: 10px;
+    line-height: 20px;
+    text-align: center;
+    background: transparent;
+    outline: none;    
+}
 
 
 // .inner__input{
