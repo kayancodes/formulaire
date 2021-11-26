@@ -8,7 +8,7 @@ var b_email=false;
 var b_number=false;
 
 function envoyer(){
-    if(b_prenom==true && b_nom==true && b_email==true && b_number==true){
+    if(b_prenom==true && b_nom==true && b_email==true && b_tel==true){
         document.getElementById("submit__message").innerText = "Envoi serveur";
         // document.getElementById("monFormulaire").submit();
     } else {

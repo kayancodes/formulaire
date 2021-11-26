@@ -344,7 +344,7 @@ main{
     margin-bottom: var(--mb-40);
 }
 
-textarea, input[type=text], input[type=email], input[type=number]{   
+textarea, input[type=text], input[type=email], input[type=tel]{   
     /* Remove First */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -353,7 +353,7 @@ textarea, input[type=text], input[type=email], input[type=number]{
 }
 
 
-input[type=text], input[type=email], input[type=number]{   
+input[type=text], input[type=email], input[type=tel]{   
     /* Style */
     width: 100%;
     text-align: left;
