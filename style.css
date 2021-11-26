@@ -353,7 +353,7 @@ footer {
   background-color: var(--color2);
   padding: 0.9375rem 0; }
   .footer__inner a {
-    color: var(--color4);
+    color: var(--color0);
     padding: 0 0.625rem;
     font-family: var(--font1);
     font-size: var(--smaller-font-size); }

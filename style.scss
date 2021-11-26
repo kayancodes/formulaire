@@ -317,6 +317,7 @@ main{
 }
 .formulaire__inner.is-visible{
     display: block;
+    
 }
 /*------------- fin zone toggle -----------------------------*/
 
@@ -500,7 +501,7 @@ footer{
     padding: 0.9375rem 0;
 
     a{
-        color: var(--color4);
+        color: var(--color0);
         padding: 0 0.625rem;
         font-family: var(--font1);
         font-size: var(--smaller-font-size);
