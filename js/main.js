@@ -1,5 +1,33 @@
 
 
+/*==================== DEBUT VERIFICATION DES SAISIES==========================================*/
+
+var b_prenom=false; 
+var b_nom=false; 
+var b_email=false;
+var b_number=false;
+
+function envoyer(){
+    if(b_prenom==true && b_nom==true && b_email==true && b_number==true){
+        document.getElementById("submit__message").innerText = "Envoi serveur";
+        // document.getElementById("monFormulaire").submit();
+    } else {
+        document.getElementById("submit__message").innerText = "Le formulaire n'est pas complet";
+    }
+}
+
+
+
+/*==================== FIN VERIFICATION DES SAISIES==========================================*/
+
+
+
+
+
+
+
+
+
 
 /*==================== DEBUT FORMULAIRE BOUTON ==========================================*/
 const btn = document.querySelector('button');

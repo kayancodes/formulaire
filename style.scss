@@ -25,6 +25,7 @@
 --color3:#e0e5eb; /* bleu clair */
 --color4:#1d2228; /* bleu foncé */
 --color5:#202020;
+--color6:#FF0000;
 
 
 
@@ -460,6 +461,14 @@ button.form__content-submit{
     font-size: var(--normal-font-size);
     padding: 0.9375rem 2.5rem;
     cursor: pointer;
+ }
+
+
+ #submit__message{
+    margin-top: .5rem;
+    font-size: var(--normal-font-size);
+    font-family: var(--font2);
+    color: var(--color6);
  }
 /*------------- fin form validation ----------------------------------*/
 
