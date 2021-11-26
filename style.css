@@ -145,7 +145,7 @@ main {
 
 .nav__link {
   color: var(--color0);
-  font-weight: var(--font-thin);
+  font-weight: var(--font-extraL);
   font-family: var(--normal-font-size); }
   .nav__link:hover {
     color: var(--color0);
@@ -361,7 +361,7 @@ footer {
 .footer__inner a {
   color: var(--color0);
   padding: 0 0.625rem;
-  font-weight: var(--font-thin);
+  font-weight: var(--font-extraL);
   font-family: var(--font1);
   font-size: var(--smaller-font-size); }
   .footer__inner a:hover {
