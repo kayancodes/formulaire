@@ -12,7 +12,7 @@ function envoyer(){
         document.getElementById("submit__message").innerText = "Envoi serveur";
         // document.getElementById("monFormulaire").submit();
     } else {
-        document.getElementById("submit__message").innerText = "Le formulaire n'est pas complet";
+        document.getElementById("submit__message").innerText = "Le formulaire n'est pas complet.";
     }
 }
 
