@@ -9,6 +9,9 @@
     <!-- FAVICON ------------------------------->
     <link rel="shortcut icon" href="assets/img/favicon.ico" type="image/x-icon">
 
+    <!-- REMIX --------------------------------->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
     <!-- CSS ------------------------------->
     <link rel="stylesheet" href="style.css">
 
@@ -25,16 +28,18 @@
 
             <div class="header__inner">
                 <div class="header__titre">
-                    <img src="assets/img/logo.png" alt="">
+                    <a href="">
+                        <img src="assets/img/logo.png" alt="">
+                    </a>
                 </div>
 
-                <nav class="header__nav">
+                <nav class="header__nav" id="header-nav">
                     <ul class="nav__list">
                         <li class="nav__item">
-                            <a href="" class="nav__link">Accueil</a>
+                            <a href="accueil" class="nav__link">Accueil</a>
                         </li>
                         <li class="nav__item">
-                            <a href="" class="nav__link">Acheter</a>
+                            <a href="acheter" class="nav__link">Acheter</a>
                         </li>
                         <li class="nav__item">
                             <a href="" class="nav__link">Louer</a>
@@ -52,9 +57,21 @@
                             <a href="" class="nav__link">L'agence</a>
                         </li>            
                      </ul>
+
+                    <!-- HIDDE MENU  icone CROIX -->
+                     <i class="ri-close-fill nav__close" id="nav-close"></i>
+
                 </nav>
+
+                <!-- SHOW MENU  icone HAMBURGER-->
+                <div class="nav__toggle" id="nav-toggle">
+                    <i class="ri-menu-fill"></i>
+                </div>
+
+                
+
         
-            </div>
+            </div><!-- fin div__inner -->
        </header>
         <!--====== FIN HEADER ==================================-->
 

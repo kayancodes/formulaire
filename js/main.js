@@ -1,6 +1,36 @@
+/*==================== DEBUT HEADER SHOW MENU NAV==========================================*/
+const navMenu = document.getElementById('header-nav'),
+      navToggle = document.getElementById('nav-toggle'),
+      navClose = document.getElementById('nav-close')
 
 
-/*==================== DEBUT VERIFICATION DES SAISIES==========================================*/
+/*------ SHOW MENU ------------*/
+/*------ validation si la constant existe - Appuyer sur bouton HAMBURGER ------------*/
+if(navToggle){
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.add('show-menu')
+    })
+}
+
+/*------ HIDDE MENU ------------*/
+/*------ validation si la constant existe - Appuyer sur la CROIX ------------*/
+if(navClose){
+    navClose.addEventListener('click', () =>{
+        navMenu.classList.remove('show-menu')
+    })
+}
+
+/*==================== DEBUT HEADER SHOW MENU NAV==========================================*/
+
+
+
+
+
+
+
+
+
+/*==================== DEBUT FORMULAIRE VERIFICATION DES SAISIES==========================================*/
 
 var b_prenom=false; 
 var b_nom=false; 
@@ -18,7 +48,7 @@ function envoyer(){
 
 
 
-/*==================== FIN VERIFICATION DES SAISIES==========================================*/
+/*==================== FIN FORMULAIRE VERIFICATION DES SAISIES==========================================*/
 
 
 
@@ -89,9 +119,6 @@ form.addEventListener('submit', function(e) {
         e.preventDefault();
     }
 });
-
-
-
 /*==================== FIN VERIFICATION ADRESS MAIL ==========================================*/
 
 
