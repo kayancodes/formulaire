@@ -208,8 +208,7 @@ main{
     display: flex;
     // justify-content: center;
     justify-content: flex-end;
-    align-items: center;
-    
+    align-items: center;  
 }
 .header__titre{
     position: absolute;
@@ -225,7 +224,7 @@ main{
         position: fixed;
         background-color: #1d2228;
         top: 0;
-        right: -350px;
+        right: -500px;
         width: 60%;
         height: 100%;
         // box-shadow: ;
@@ -503,7 +502,7 @@ input[type='checkbox']{
 
 /*------------- debut form validation ----------------------------------*/
 button.form__content-submit{
-    background-color:var(--color5);
+    background-color:var(--color4);
     border: none;
     color: white;
     font-size: var(--normal-font-size);
@@ -610,6 +609,7 @@ footer{
 
 
 
+    
 
 
 
@@ -618,16 +618,32 @@ footer{
 
 //------------ DEBUT MD ( > 768px) : small tablets and large smartphones (landscape view) ---------//
 @include md{
+
+    .nav__icones{
+        display: none;
+    }
+
+    .header__inner{
+        padding: inherit;
+        justify-content: center;
+    }
+    .nav__list{
+        font-family: var(--font2);
+        font-size: var(--small-font-size);
+        display: flex;
+        flex-direction: row;
+        column-gap: 1.125rem;
+    }
+
+
+
+
    .footer__before{
        height: 6.25rem;
-
-        a{
-            font-size: var(--small-font-size);
-        }
    }
 
    .footer__inner a{
-         font-size: var(--normal-font-size);
+         font-size: var(--small-font-size);
     }
 
    
@@ -652,18 +668,13 @@ footer{
 
 
 
-    .header__inner{
-        padding: inherit;
-    }
+   
 
 
     .nav__list{
-        font-family: var(--font2);
-        display: flex;
-        flex-direction: row;
+        font-size: var(--normal-font-size);
         column-gap: 3.125rem;
     }
-
 
 
     .accueil__inner{
@@ -697,6 +708,11 @@ footer{
         bottom: 0.9375rem;
         left: 1.25rem;
     }
+
+
+    .footer__inner a{
+        font-size: var(--normal-font-size);
+   }
 }
 //------------ FIN LG ( > 962px) : Tablets and small desktops ---------//
 

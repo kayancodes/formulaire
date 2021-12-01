@@ -1,4 +1,4 @@
-/*==================== DEBUT HEADER SHOW MENU NAV==========================================*/
+/*==================== DEBUT HEADER MENU NAV==========================================*/
 const navMenu = document.getElementById('header-nav'),
       navToggle = document.getElementById('nav-toggle'),
       navClose = document.getElementById('nav-close')
@@ -19,8 +19,22 @@ if(navClose){
         navMenu.classList.remove('show-menu')
     })
 }
+/*==================== DEBUT HEADER MENU NAV==========================================*/
 
-/*==================== DEBUT HEADER SHOW MENU NAV==========================================*/
+
+
+
+
+/*==================== DEBUT REMOVE MENU MOBILE ==========================================*/
+const navLink = document.querySelectorAll('.nav__link')
+
+function linkAction(){
+    const navMenu = document.getElementById('header-nav')
+    // When we click on each nav__link, we remove the show-menu class
+    navMenu.classList.remove('show-menu')
+}
+navLink.forEach(n => n.addEventListener('click', linkAction))
+/*==================== FIN REMOVE MENU MOBILE ==========================================*/
 
 
 
@@ -45,9 +59,6 @@ function envoyer(){
         document.getElementById("submit__message").innerText = "Le formulaire n'est pas complet.";
     }
 }
-
-
-
 /*==================== FIN FORMULAIRE VERIFICATION DES SAISIES==========================================*/
 
 
