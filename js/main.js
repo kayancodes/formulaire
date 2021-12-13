@@ -1,65 +1,114 @@
-/*==================== DEBUT HEADER MENU NAV==========================================*/
-const navMenu = document.getElementById('header-nav'),
-      navToggle = document.getElementById('nav-toggle'),
-      navClose = document.getElementById('nav-close')
 
 
-/*------ SHOW MENU ------------*/
-/*------ validation si la constant existe - Appuyer sur bouton HAMBURGER ------------*/
-if(navToggle){
-    navToggle.addEventListener('click', () => {
-        navMenu.classList.add('show-menu')
-    })
+
+const form = document.querySelector('#create-account-form');
+const usernameInput = document.querySelector('#username')
+const emailInput = document.querySelector('#email');
+const passwordInput = document.querySelector('#password');
+const confirmPasswordInput = document.querySelector('#confirm-password');
+
+form.addEventListener('submit', (event)=>{
+    //prevent submit form
+    // event.preventDefault();
+
+    validateForm();
+
+
+//Conditions d'envoi (SUBMIT) du formulaire //si toutes les INPUTS sont TRUE le formulair est Envoyé, sinon Non
+    if(isFormValid()==true){
+        form.submit();
+    }else {
+        event.preventDefault();
+    }
+
+
+});
+
+
+//condition de validation de chaque INPUT
+function isFormValid(){
+    const inputContainers = form.querySelectorAll('.input-group');
+    let result=true;
+    
+    inputContainers.forEach((container)=>{
+        if(container.classList.contains('error')){
+            result = false;
+        }
+    });
+
+    return result;
 }
 
-/*------ HIDDE MENU ------------*/
-/*------ validation si la constant existe - Appuyer sur la CROIX ------------*/
-if(navClose){
-    navClose.addEventListener('click', () =>{
-        navMenu.classList.remove('show-menu')
-    })
-}
-/*==================== DEBUT HEADER MENU NAV==========================================*/
 
+function validateForm(){
+    //USERNAME
+    //Alerte input vide
+    if(usernameInput.value.trim()==''){
+        setError(usernameInput, 'Name can not be empty');
 
-
-
-
-/*==================== DEBUT REMOVE MENU MOBILE ==========================================*/
-const navLink = document.querySelectorAll('.nav__link')
-
-function linkAction(){
-    const navMenu = document.getElementById('header-nav')
-    // When we click on each nav__link, we remove the show-menu class
-    navMenu.classList.remove('show-menu')
-}
-navLink.forEach(n => n.addEventListener('click', linkAction))
-/*==================== FIN REMOVE MENU MOBILE ==========================================*/
-
-
-
-
-
-
-
-
-
-/*==================== DEBUT FORMULAIRE VERIFICATION DES SAISIES==========================================*/
-
-var b_prenom=false; 
-var b_nom=false; 
-var b_email=false;
-var b_number=false;
-
-function envoyer(){
-    if(b_prenom==true && b_nom==true && b_email==true && b_tel==true){
-        document.getElementById("submit__message").innerText = "Envoi serveur";
-        // document.getElementById("monFormulaire").submit();
+    //Alerte input <5 ou >15 characteres
+    } else if(usernameInput.value.trim().length <5 || usernameInput.value.trim().length >15){
+        setError(usernameInput, 'Name must be min 5 and max 15 characters');
     } else {
-        document.getElementById("submit__message").innerText = "Le formulaire n'est pas complet.";
+        setSuccess(usernameInput);
+    }
+
+    //EMAIL
+    if(emailInput.value.trim()==''){
+        setError(emailInput, 'Provide email address');
+    } else if(isEmailValid(emailInput.value)){
+        setSuccess(emailInput);
+    } else {
+        setError(emailInput, 'Provide valid email address');
+    }
+
+    //PASSWORD
+    if(passwordInput.value.trim()==''){
+        setError(passwordInput, 'Password can not be empty');
+    } else if (passwordInput.value.trim().length <6 || passwordInput.value.trim().length >20){
+        setError(passwordInput, 'Password min 6 and max 20 characters');
+    } else {
+        setSuccess(passwordInput);
+    }
+    
+
+    //CONFIRM PASSWORD
+    if(confirmPasswordInput.value.trim()==''){
+        setError(confirmPasswordInput, 'Password can not be empty')
+    } else if(confirmPasswordInput.value !== passwordInput.value){
+        setError(confirmPasswordInput, 'Password does not match');
+    } else{
+        setSuccess(confirmPasswordInput);
     }
 }
-/*==================== FIN FORMULAIRE VERIFICATION DES SAISIES==========================================*/
+
+//affichage message d'erreur 
+function setError(element, errorMessage){
+    const parent = element.parentElement;
+    if(parent.classList.contains('success')){
+        parent.classList.remove('success');
+    }
+    parent.classList.add('error');
+    
+    const paragraph = parent.querySelector('p');
+    paragraph.textContent = errorMessage;
+}
+
+//affichage message de succes 
+function setSuccess(element){
+    const parent = element.parentElement;
+    if(parent.classList.contains('error')){
+        parent.classList.remove('error')
+    }
+    parent.classList.add('success')
+}
+
+
+//conditions de reuissite pour EMAIL
+function isEmailValid(email){
+    const reg = /^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$/;
+    return reg.test(email);
+}
 
 
 
@@ -70,16 +119,6 @@ function envoyer(){
 
 
 
-/*==================== DEBUT FORMULAIRE BOUTON ==========================================*/
-const btn = document.querySelector('button');
-const content = document.querySelector('.formulaire__inner');
-const img = document.querySelector('.formulaire__arrow');
-
-btn.addEventListener('click', () => {
-    content.classList.toggle('is-visible');
-    img.classList.toggle('rotated')
-})
-/*==================== FIN FORMULAIRE BOUTON ==========================================*/
 
 
 
@@ -90,61 +129,47 @@ btn.addEventListener('click', () => {
 
 
 // /*==================== DEBUT VERIFICATION ADRESS MAIL ==========================================*/
-let form = document.querySelector('#monFormulaire');
+// let form = document.querySelector('#monFormulaire');
 
-form.mail.addEventListener('change', function() {
-    validEmail(this);
-});
-
-
-// //------- validation email-----------------------------------------------------//
-const validEmail=function(inputEmail){
-    //creation de la regExp pour validation email 
-    let emailRegExp = new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g');
-
-    //on test l'expression reguliere 
-    let testEmail = emailRegExp.test(inputEmail.value);
-
-    //recuperation de la balise small
-    let small = inputEmail.nextElementSibling;
+// form.mail.addEventListener('change', function() {
+//     validEmail(this);
+// });
 
 
-    if (testEmail == true){
-        small.innerHTML = "L'adresse mail est valide.";
-        small.style.color="green";
-        return true;
-    } else {
-        small.innerHTML = "L'adresse mail n'est pas valide.";
-        small.style.color="red";
-        return false;
-    }
-};
+// // //------- validation email-----------------------------------------------------//
+// const validEmail=function(inputEmail){
+//     //creation de la regExp pour validation email 
+//     let emailRegExp = new RegExp('^[a-zA-Z0-9.-_]+[@]{1}[a-zA-Z0-9.-_]+[.]{1}[a-z]{2,10}$', 'g');
+
+//     //on test l'expression reguliere 
+//     let testEmail = emailRegExp.test(inputEmail.value);
+
+//     //recuperation de la balise small
+//     let small = inputEmail.nextElementSibling;
 
 
-//ecouter la soumission du formlaire 
-form.addEventListener('submit', function(e) {
+//     if (testEmail == true){
+//         small.innerHTML = "L'adresse mail est valide.";
+//         small.style.color="green";
+//         return true;
+//     } else {
+//         small.innerHTML = "L'adresse mail n'est pas valide.";
+//         small.style.color="red";
+//         return false;
+//     }
+// };
 
-    if( validEmail(form.mail) == true){
-        console.log('email valide');
-    }else {
-        e.preventDefault();
-    }
-});
+
+// //ecouter la soumission du formlaire 
+// form.addEventListener('submit', function(e) {
+
+//     if( validEmail(form.mail) == true){
+//         console.log('email valide');
+//     }else {
+//         e.preventDefault();
+//     }
+// });
 /*==================== FIN VERIFICATION ADRESS MAIL ==========================================*/
 
 
 
-
-
-/*==================== DEBUT SCROLL REVEAL ANIMATION ====================*/ 
-const sr = ScrollReveal({
-    distance: '60px',
-    duration: 2500,
-    // reset:true
-})
-
-sr.reveal(`.acheter__vente-texte`,{
-    origin:'bottom',
-    interval:100,
-})
-/*==================== FIN SCROLL REVEAL ANIMATION ====================*/ 

@@ -185,156 +185,13 @@ main{
 // ===================== DEBUT REUSABLE CLASS ========================================== //
 .sous__section{
     padding:0 0 6.25rem ;
-    text-align: center;
+    // text-align: center;
 }
 // ===================== FIN REUSABLE CLASS ========================================== //
 
 
 
-/*===================== DEBUT HEADER ==========================================*/
-.header{
-    position: fixed;
-    z-index: 10;
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color:var(--color2);
-}
 
-//pour centrer HEADER__NAV
-.header__inner{
-    padding: 1.15rem 0;
-    position: relative;
-    display: flex;
-    // justify-content: center;
-    justify-content: flex-end;
-    align-items: center;  
-}
-.header__titre{
-    position: absolute;
-    left:0.625rem;
-}
-
-//panneau MENU en mode MOBILE
-.header__nav{
-    padding: 1.5rem 0;
-    position: relative;
-
-    @include ms{
-        position: fixed;
-        background-color: #1d2228;
-        top: 0;
-        right: -500px;
-        width: 60%;
-        height: 100%;
-        // box-shadow: ;
-        padding: 3rem;
-        transition: .4s;
-    }
-}
-//liste des items du NAV
-.nav__list{
-    // display: none;
-    display: flex;
-    flex-direction: column;
-    row-gap: 2.5rem;
-}
-.nav__link{
-    color:var(--color0);
-    font-weight:var(--font-extraL);
-    font-family: var(--normal-font-size);
-    text-transform: uppercase;
-    
-    &:hover{
-        color:var(--color0);
-        font-weight:var(--font-medium);
-    }
-}
-
-// DEBUT CLOSE MENU
-.nav__close{
-    color: var(--color0);
-    position: absolute;
-    top: 1.2rem;
-    right: .6rem;
-    font-size: 1rem;
-    cursor: pointer;
-}
-// FIN CLOSE MENU
-
-
-// DEBUT SHOW MENU
-.nav__toggle{ //BURGER
-    color: var(--color0);
-    font-size: 1.2rem;
-    padding-right:.5rem  ;
-    // cursor: pointer;
-}
-.show-menu{
-    right: 0;
-}
-// FIN SHOW MENU
-
-
-
-
-
-
-/*===================== FIN HEADER ==========================================*/
-
-
-
-
-/*===================== DEBUT ACCUEIL ==========================================*/
-.accueil__inner{
-    width: 100%;
-   
-    
-    .accueil__image{
-        height: 100vh;
-        background:url("assets/img/appartement.png") no-repeat center top ;
-        background-size: cover;
-        position: relative;   
-    }
-
-
-    .accueil__infos{
-        padding: 1.875rem 0;
-        position: relative;
-        background-color:var(--color3);
-    }
-    .accueil__infos-content{
-        text-align: center;
-    }
-    .accueil__infos-iconesPack{
-        display: flex;
-        justify-content: space-between;
-        max-width: 18.75rem;
-        margin: 0 auto var(--mb-50);
-
-        .iconesPack__item{
-            border-right: 0.0625rem solid var(--color2);
-            // background-color: green;
-            padding: 0 1.25rem;
-            text-align: center;
-
-            &:last-child{
-                border-right: none;
-            }
-        }
-    }
-    .iconesPack__item-text{
-        color:var(--color2);
-    }
-
-
-    .accueil__info-1000{
-        font-family: var(--font1);
-        font-weight: var(--font-light);
-        margin-bottom: var(--mb-60);
-    }
-}
-/*===================== FIN ACCUEIL ==========================================*/
 
 
 
@@ -345,6 +202,7 @@ main{
 /*------------- PARTIE FORMULAIRE -------------------------------------------*/
 .acheter__formulaire-h3{
     margin-bottom: 0;
+    text-align: center;
 }
 
 
@@ -360,12 +218,11 @@ main{
     padding-top: 1.25rem;
 }
 .formulaire__inner{
-    display: none;
-}
-.formulaire__inner.is-visible{
     display: block;
-    
 }
+// .formulaire__inner.is-visible{
+//     display: none;
+// }
 /*------------- fin zone toggle -----------------------------*/
 
 
@@ -385,6 +242,10 @@ main{
     -webkit-transform: rotate(-180deg);
 }
 
+#create-account-form{
+
+}
+
 
 
 /*------------- debut form texte ----------------------------------*/
@@ -392,7 +253,66 @@ main{
     margin-bottom: var(--mb-40);
 }
 
-textarea, input[type=text], input[type=email], input[type=tel]{   
+.input-group{
+    margin: 10px 0;
+    position: relative;
+}
+
+.input-group label{
+    display: inline-block;
+}
+
+.input-group input {
+    display: block;
+    width: 100%;
+    padding: 10px;
+}
+.error input{
+    border: 3px solid red !important;
+}
+.success input{
+    border: 3px solid green !important;
+}
+
+
+.input-group i {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    visibility: hidden;
+}
+.error i.ri-close-circle-fill{
+    visibility: visible;
+    color: red; 
+}
+.success i.ri-checkbox-circle-fill{
+    visibility: visible;
+    color: green;
+}
+
+
+.input-group p{
+    font-size: 15px;
+    color : red;
+    visibility: hidden;
+}
+
+.error p{
+    visibility: visible;
+}
+
+.btn{
+    width: 100%;
+    padding: 10px;
+    font-size: 20px;
+    background-color: chocolate;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+
+}
+
+textarea, input[type=text], input[type=email], input[type=tel], input[type=password]{   
     /* Remove First */
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -401,7 +321,7 @@ textarea, input[type=text], input[type=email], input[type=tel]{
 }
 
 
-input[type=text], input[type=email], input[type=tel]{   
+input[type=text], input[type=email], input[type=tel], input[type=password]{   
     /* Style */
     width: 100%;
     text-align: left;
@@ -420,103 +340,37 @@ input:-moz-placeholder { color:var(--color2); font-family: var(--font2); text-tr
 input:-ms-input-placeholder { color:var(--color2); font-family: var(--font2); text-transform: none;font-size: var(--normal-font-size); }
 
 
-textarea{
-    width: 100%;
-    border: none;
-    padding: 20px 10px 10px 10px;
-    outline: none; 
-    font-family: var(--font2);
-    font-size: var(--normal-font-size);
-    line-height: 1.0625rem;
-}
-.form__content-textarea{
-    border: 1px solid var(--color2);
-}
-.textarea__label{
-    font-family: var(--font2);
-    font-size: var(--normal-font-size);
-    color: var(--color2);
-    text-align: left;
-    display: block;
-    padding: 0.625rem 0 0 0.625rem;
-
-}
-small{
-    padding: 2px 0 0 0;
-    font-family: var(--font2);
-    text-align: left;
-    display: block;
-}
+// small{
+//     padding: 2px 0 0 0;
+//     font-family: var(--font2);
+//     text-align: left;
+//     display: block;
+// }
 /*------------- fin form texe ----------------------------------*/
 
 
 
-/*------------- debut form check----------------------------------*/
-.form__container-check{
-    margin-bottom: var(--mb-40);
-}
-
-.form__content-check{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    
-    
-        .check__case{
-            font-size: 0.75rem;
-        }
-
-        .check__label{
-            width: 90%;
-            text-align: justify;
-            font-size: 0.75rem;
-            cursor: pointer;
-        }
-}
-
-
-input[type='checkbox']{
-    /* Remove */
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -o-appearance: none;
-    appearance:none;
-    
-
-    /* Style */
-    width: 0.9375rem;
-    height: 0.9375rem;
-    border-radius: 0;
-    outline: 1px solid var(--color2);
-  }
-
-  input[type='checkbox']:checked {
-    outline: 1px solid var(--color2);
-    border: 3px solid var(--color0);
-    background-color: var(--color5);
-    }
-/*------------- fin form check----------------------------------*/
 
 
 
 
 /*------------- debut form validation ----------------------------------*/
-button.form__content-submit{
-    background-color:var(--color4);
-    border: none;
-    color: white;
-    font-size: var(--normal-font-size);
-    padding: 0.9375rem 2.5rem;
-    cursor: pointer;
- }
+// button.form__content-submit{
+//     background-color:var(--color4);
+//     border: none;
+//     color: white;
+//     font-size: var(--normal-font-size);
+//     padding: 0.9375rem 2.5rem;
+//     cursor: pointer;
+//  }
 
 
- #submit__message{
-    margin-top: .3rem;
-    font-size: var(--normal-font-size);
-    font-family: var(--font2);
-    color: red;
- }
+//  #submit__message{
+//     margin-top: .3rem;
+//     font-size: var(--normal-font-size);
+//     font-family: var(--font2);
+//     color: red;
+//  }
 /*------------- fin form validation ----------------------------------*/
 
 
@@ -525,49 +379,6 @@ button.form__content-submit{
 
 
 
-
-
-
-/*===================== DEBUT FOOTER ==========================================*/
-footer{
-    width: 100%;
-    border-bottom:1px solid var(--color0) ;
-}
-
-
-.footer__before{
-    background-color:var(--color3);
-    height: 3.75rem;
-}
-
-
-.footer__inner{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:var(--color2);
-    padding: 0.9375rem 0;
-
-
-    .footer__item{
-        border-left: 0.0625rem solid var(--color4);
-        border-right: 0.0625rem solid var(--color4);
-    }
-}
-
-.footer__inner a{
-    color:var(--color0);
-    padding: 0 0.625rem;
-    font-weight:var(--font-extraL);
-    font-family: var(--font1);
-    font-size: var(--smaller-font-size);
-
-    &:hover{
-        color:var(--color0);
-        font-weight:var(--font-medium);
-    }
-}
-/*===================== FIN FOOTER ==========================================*/
 
 
 
@@ -633,6 +444,9 @@ footer{
         display: flex;
         flex-direction: row;
         column-gap: 1.125rem;
+    }
+    .menu-btn{
+        display: none;
     }
 
 

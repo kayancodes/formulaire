@@ -15,7 +15,7 @@
     <!-- CSS ------------------------------->
     <link rel="stylesheet" href="style.css">
 
-    <title>Test Intégration</title>
+    <title>Demo Formulaire 5</title>
 </head>
 
 
@@ -23,141 +23,21 @@
 
     <!-- <div class="wrapper"> -->
 
-       <!--====== DEBUT HEADER ==================================-->
-        <header class="header">
-
-            <div class="header__inner">
-                <div class="header__titre">
-                    <a href="">
-                        <img src="assets/img/logo.png" alt="">
-                    </a>
-                </div>
-
-                <nav class="header__nav" id="header-nav">
-                    <ul class="nav__list">
-                        <li class="nav__item">
-                            <a href="#accueil" class="nav__link">Accueil</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="#acheter" class="nav__link">Acheter</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">Louer</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">Estimer</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">Vendus</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">Actualités</a>
-                        </li>
-                        <li class="nav__item">
-                            <a href="" class="nav__link">L'agence</a>
-                        </li>            
-                     </ul>
-
-                    <!-- HIDDE MENU  icone CROIX -->
-                     <i class="ri-close-fill nav__close nav__icones" id="nav-close"></i>
-
-                </nav>
-
-                <!-- SHOW MENU  icone HAMBURGER-->
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-fill nav__icones"></i>
-                </div>
-
-                
-
-        
-            </div><!-- fin div__inner -->
-       </header>
-        <!--====== FIN HEADER ==================================-->
-
-
-        <!--====== DEBUT ACCUEIL ==================================-->
-       <div class="accueil" id="accueil">
-            <div class="accueil__inner">
-
-                <div class="accueil__image">
-                    <!-- <img src="assets/img/appartement.png" alt=""> -->
-                </div>
-
-                <div class="accueil__infos" id="accueil__infos">
-                    <div class="accueil__infos-content">
-                        <h2 class="accueil__info-appartement">APPARTEMENT</h2>
-                        <h1 class="accueil__info-boulogne">Boulogne-Billancourt (92300) <br> Place de la Mairie</h1>
-
-                        <div class="accueil__infos-iconesPack">
-                            <div class="iconesPack__item">
-                                <img src="assets/img/icone__mcarre2.png" alt="">
-                                <p class="iconesPack__item-text">100</p>
-                            </div>
-                            <div class="iconesPack__item">
-                                <img src="assets/img/icone__door.png" alt="">
-                                <p class="iconesPack__item-text">7</p>
-                            </div>
-                            <div class="iconesPack__item">
-                                <img src="assets/img/icone__bed.png" alt="">
-                                <p class="iconesPack__item-text">4</p>
-                            </div>
-                            <div class="iconesPack__item">
-                                <img src="assets/img/icone__bathtub.png" alt="">
-                                <p class="iconesPack__item-text">1</p>
-                            </div>
-                            <div class="iconesPack__item">
-                                <img src="assets/img/icone__shower.png" alt="">
-                                <p class="iconesPack__item-text">1</p>
-                            </div>
-                        </div>
-
-                        <p class="accueil__info-1000">1&nbsp; 0 0 0&nbsp; &euro; &nbsp;PAR MOIS</p>
-
-                    
-                        <div class="accueil__infos-iconesDuo">
-                            <img src="assets/img/icones__duo.png" alt="">
-                        </div>
-
-                    </div>
-                </div>
-
-            </div>
-       </div>
-        <!--====== FIN ACCUEIL ==================================-->
-
 
         <main class="main">
             <!--====== DEBUT ACHETER =========================================================-->
             <section class="acheter section" id="acheter">
                 <div class="acheter__inner">
 
-                    <!--------- DEBUT VENTE ----------------------------------------------------------->
-                    <div class="acheter__vente sous__section">
-                        <h1>Vente appartement à <br class="acheter__vente-line" /> Boulogne-Billancourt</h1>
-                        <h3 class="acheter__vente-soustitre soustitre">Descriptif du bien</h3>
-                        <p class="acheter__vente-texte">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut 
-                            labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris 
-                            nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit 
-                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, 
-                            sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur 
-                            adipiscing elit, sed do eiusmod tempor
-                        </p>
-                    </div>
-                    <!--------- DEBUT VENTE ----------------------------------------------------------->
-
-               
-    
-    
+                    
                     <!--------- DEBUT FORMULAIRE ----------------------------------------------------------->
                     <div class="acheter__formulaire sous__section">
 
                         <div class="acheter__formulaire-soustitre">
-                            <h3 class="acheter__formulaire-h3">Contactez-nous</h3>
-                            <button class="btn btn-primary">
+                            <h3 class="acheter__formulaire-h3"><strong>FORMULAIRE</strong></h3>
+                            <!-- <button class="btn btn-primary">
                                 <img src="assets/img/arrowdown.png" class="formulaire__arrow" alt="">
-                            </button>
+                            </button> -->
                         </div>
 
 
@@ -166,63 +46,58 @@
                             <div class="formulaire__inner">
 
 
-                                <form method="POST" action="traitement.php" class="form__container" id="monFormulaire">
+                                <form method="GET" action="result.html" class="form__container" id="create-account-form"> <!-------- action="result.html" -------->
 
                                     <!--------- DEBUT FORM TEXTE ----------------------------------------------------------->
-                                    <div class="form__container-texte grid">
-                                        <div class="form__content-texte">
-                                            <input type="text" id="prenom" name="prenom" placeholder="Votre Prénom" class="inner__input">
+                                    <div class="account-form-container grid">
+    
+                                        <!--------- USER NAME------------>
+                                        <div class="input-group">
+                                            <label for="username">Name</label>
+                                            <input type="text" id="username" name="username" placeholder="Votre Nom" class="inner__input">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                            <i class="ri-close-circle-fill"></i>
+                                            <p>Error Message</p>
                                         </div>
     
-                                        <div class="form__content-texte">
-                                            <input type="text" id="nom" name="nom" placeholder="Votre Nom" class="inner__input">
+                                        <!--------- EMAIL------------>
+                                        <div class="input-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" id="email" name="email" placeholder="Votre Email*" class="inner__input">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                            <i class="ri-close-circle-fill"></i>
+                                            <p>Error Message</p>
                                         </div>
-    
-                                        <div class="form__content-texte">
-                                            <input type="email" id="email" name="mail" placeholder="Votre Email*" class="inner__input">
-                                            <small></small>
+
+                                        <!--------- PASSWORD ------------>
+                                        <div class="input-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" id="password" name="password" placeholder="Votre mot de passe *" class="inner__input">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                            <i class="ri-close-circle-fill"></i>
+                                            <p>Error Message</p>
                                         </div>
-    
-                                        <div class="form__content-texte">
-                                            <input type="tel" id="phone" name="phone" placeholder="Votre numéro de téléphone" class="inner__input"><br>
-                                        </div>
-                                                
-                                        <div class="form__content-texte form__content-textarea">
-                                            <label for="message" class="textarea__label">Votre Message</label>
-                                            <textarea name="presentation" id="message" cols="30" rows="4" class="inner__textarea">Bonjour, je souhaiterais avoir plus de renseignements sur ce bien et prendre rendez-vous pour le visiter. Pourriez-vous me recontacter ? Cordialement</textarea>
-                                        </div>                                
+
+                                        <!--------- CONFIRM PASSWORD------------>
+                                        <div class="input-group">
+                                            <label for="confirm-password">Confirm Password</label>
+                                            <input type="password" id="confirm-password" name="confirmPassword" placeholder="Confirmez votre mot de passe *" class="inner__input">
+                                            <i class="ri-checkbox-circle-fill"></i>
+                                            <i class="ri-close-circle-fill"></i>
+                                            <p>Error Message</p>
+                                        </div>   
+
                                     </div>
                                     <!--------- FIN FORM TEXTE ----------------------------------------------------------->
 
                                     
-                                    
-                                    <!--------- DEBUT FORM CHECK ----------------------------------------------------------->
-                                    <div class="form__container-check grid">
-                                        <div class="form__content-check">
-                                            <div class="form__content-check form__content-checkOne">
-                                                <input type="checkbox" name="infos" id="check1"  value="checkbox" class="check__case">
-                                                <label for="check1" class="check__label">
-                                                    Je souhaite recevoir des informations personnalisées par e-mail et/ou sms de la part d’Agence-Plus.
-                                                </label>
-                                            </div>
-                                        </div>
-    
-                                        <div class="form__content-check">
-                                            <div class="form__content-check">
-                                                <input type="checkbox" name="donnes" id="check2"  value="checkbox" class="check__case">
-                                                <label for="check2" class="check__label">
-                                                    J’accepte que mes données soient transférées aux partenaires du Réseau Agence-Plus afin que ces derniers puissent m’adresser des communications par e-mail et/ou sms.
-                                                </label>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <!--------- FIN FORM CHECK ----------------------------------------------------------->
+
 
 
                                     <!--------- DEBUT FORM VALIDATION ----------------------------------------------------------->
                                     <div class="form__content">
-                                        <button onClick="envoyer()" type="submit" class="form__content-submit">Envoyer</button>    
-                                        <div id="submit__message"></div>   
+                                        <button onClick="envoyer()" type="submit" class="btn form__content-submit">Envoyer</button>    
+                                        <!-- <div id="submit__message"></div>    -->
                                     </div>
                                     <!--------- DEBUT FORM VALIDATION ----------------------------------------------------------->
 
@@ -245,16 +120,6 @@
         </main>
 
 
-        <!--====== DEBUT FOOTER ============================================================-->
-        <footer>
-            <div class="footer__before">
-
-            </div>
-            <div class="footer__inner">
-                    <a href="">MENTIONS LÉGALES/BARÈME</a> <a href="" class="footer__item">LIENS UTILES</a> <a href="">RÉALISATION AGENCE PLUS</a>
-            </div>
-        </footer>
-        <!--====== FIN FOOTER ============================================================-->
 
     <!-- </div> FIN WRAPPER -->
 
